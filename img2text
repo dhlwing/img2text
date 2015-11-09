@@ -23,7 +23,15 @@ DOC;
 require __DIR__.'/vendor/autoload.php';
 $args = Docopt::handle($doc);
 if ($args->args['<imgfile>']) {
-    $img = new Bigweb\Img2text\Img2text($args->args['<imgfile>']);
+    $options = [
+        'ansi'     => $args->args['--ansi'],
+        'color'    => $args->args['--color'],
+        'fontSize' => $args->args['--fontSize'],
+        'maxLen'   => $args->args['--maxLen'],
+        'bgcolor'  => $args->args['--bgcolor'],
+    ];
+
+    $img = new Bigweb\Img2text\Img2text($args->args['<imgfile>'], $options);
     echo $img->render();
 } else {
     foreach ($result as $k=>$v)

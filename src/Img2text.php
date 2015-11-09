@@ -8,7 +8,7 @@ class Img2text
     private $color;
     private $ansi;
     private $fileName;
-    private $maxLen=50;
+    private $maxLen;
     private $fontSize;
     private $bgcolor;
 
@@ -21,6 +21,7 @@ class Img2text
             die("file " .$fileName." not found!");
         }
         $this->fileName = $fileName;
+
         if (isset($options['maxLen']))
             $this->maxLen = $options['maxLen'];
 
@@ -31,6 +32,9 @@ class Img2text
 
         if (isset($options['color']))
             $this->color = $options['color'];
+
+        if (isset($options['ansi']))
+            $this->ansi = $options['ansi'];
         
     }
 
