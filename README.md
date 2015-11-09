@@ -36,7 +36,6 @@ Options:
   -h --help             show this screen.
   --ansi                output an ANSI rendering of the image
   --color               output a colored HTML rendering of the image.
-  --antialias           causes any resizing of the image to use antialiasing
   --fontSize=<n>        sets font size (in pixels) when outputting HTML,
                         default: 7
   --maxLen=<n>          resize image so that larger of width or height matches
