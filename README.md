@@ -10,9 +10,9 @@ Example
 
 ![](cat.jpg)
 
-1. `img2text cat.jpg > without-color.html`
-2. `img2text cat.jpg --color > with-color.html`
 
+1. `img2text cat.jpg --color > with-color.html` [demo](http://dhlwing.github.io/img2text/color.html)
+2. `img2text cat.jpg > without-color.html` [demo](http://dhlwing.github.io/img2text/nocolor.html)
 3. `img2text cat.jpg --ansi`
 It would be like this:
 ![](example/ansi.png)
