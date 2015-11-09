@@ -14,9 +14,9 @@ Example
 2. `img2text cat.jpg --color > with-color.html`
 
 3. `img2text cat.jpg --ansi`
-
 It would be like this:
 ![](example/ansi.png)
+
 Installation
 ------------
 
