@@ -8,7 +8,7 @@ class Img2text
     private $color;
     private $ansi;
     private $fileName;
-    private $maxLen;
+    private $maxLen=50;
     private $fontSize;
     private $bgcolor;
 

@@ -1,12 +1,10 @@
 #!/usr/bin/env php
 
 <?php
-$doc = <<<DOC
-Naval Fate.
+$doc = <<<'DOC'
 
 Usage:
-  img2text <imgfile> [--maxLen=<n>] [--fontSize=<n>] [--color] [--ansi]"""
-    """[--bgcolor=<#RRGGBB>]
+  img2text <imgfile> [--maxLen=<n>] [--fontSize=<n>] [--color] [--ansi] [--bgcolor=<#RRGGBB>]
   img2text (-h | --help)
 Options:
   -h --help             show this screen.
@@ -23,18 +21,11 @@ Options:
 DOC;
 
 require __DIR__.'/vendor/autoload.php';
-
-$params = array(
-    'imgfile'=>array_slice($_SERVER['argv'], 1),
-    'help' =>false,
-    'version' => 'Naval Fate 2.0',
-);
-
-$args = Docopt::handle($doc, $params);
-echo $args['<imgfile>'];
-
-print_r($args);
-exit;
-
-$img = new Bigweb\Img2text\Img2text('avatar.png');
-echo $img->render();
+$args = Docopt::handle($doc);
+if ($args->args['<imgfile>']) {
+    $img = new Bigweb\Img2text\Img2text('cat.jpg');
+    echo $img->render();
+} else {
+    foreach ($result as $k=>$v)
+        echo $k.': '.json_encode($v).PHP_EOL;
+}
