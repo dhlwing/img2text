@@ -1,0 +1,20 @@
+{
+    "name": "bigweb/img2text",
+    "autoload": {
+        "psr-4": {
+            "Bigweb\\Img2text\\": "src/"
+        }
+    },
+    "require-dev": {
+        "docopt/docopt": "dev-master",
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bigweb\\Img2text\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "intervention/image": "~2.3"
+    }
+}
