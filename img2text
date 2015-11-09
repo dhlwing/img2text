@@ -23,7 +23,7 @@ DOC;
 require __DIR__.'/vendor/autoload.php';
 $args = Docopt::handle($doc);
 if ($args->args['<imgfile>']) {
-    $img = new Bigweb\Img2text\Img2text('cat.jpg');
+    $img = new Bigweb\Img2text\Img2text($args->args['<imgfile>']);
     echo $img->render();
 } else {
     foreach ($result as $k=>$v)
