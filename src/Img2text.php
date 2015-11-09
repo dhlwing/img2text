@@ -6,9 +6,9 @@ use Intervention\Image\ImageManagerStatic as Image;
 class Img2text
 {
     private $color;
-    private $ansi = 1;
+    private $ansi;
     private $fileName;
-    private $maxLen = 50;
+    private $maxLen;
     private $fontSize;
     private $bgcolor;
 

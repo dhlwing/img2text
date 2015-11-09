@@ -1,7 +1,40 @@
 #!/usr/bin/env php
 
 <?php
+$doc = <<<DOC
+Naval Fate.
+
+Usage:
+  img2text <imgfile> [--maxLen=<n>] [--fontSize=<n>] [--color] [--ansi]"""
+    """[--bgcolor=<#RRGGBB>]
+  img2text (-h | --help)
+Options:
+  -h --help             show this screen.
+  --ansi                output an ANSI rendering of the image
+  --color               output a colored HTML rendering of the image.
+  --fontSize=<n>        sets font size (in pixels) when outputting HTML,
+                        default: 7
+  --maxLen=<n>          resize image so that larger of width or height matches
+                        maxLen, default: 100px
+  --bgcolor=<#RRGGBB>   if specified, is blended with transparent pixels to
+                        produce the output. In ansi case, if no bgcolor set, a
+                        fully transparent pixel is not drawn at all, partially
+                        transparent pixels drawn as if opaque
+DOC;
+
 require __DIR__.'/vendor/autoload.php';
+
+$params = array(
+    'imgfile'=>array_slice($_SERVER['argv'], 1),
+    'help' =>false,
+    'version' => 'Naval Fate 2.0',
+);
+
+$args = Docopt::handle($doc, $params);
+echo $args['<imgfile>'];
+
+print_r($args);
+exit;
 
 $img = new Bigweb\Img2text\Img2text('avatar.png');
 echo $img->render();
