@@ -46,6 +46,21 @@ Options:
                         transparent pixels drawn as if opaque
 ```
 
+you also can use it anywhere what you want at your application like this:
+
+```php
+use Bigweb\Img2text\Img2text;
+
+$options = [
+        'ansi'     => ,
+        'color'    => 1,
+        'fontSize' => 7,
+        'maxLen'   => 100,
+    ];
+$img = new Img2text('imageFilePath', $options);
+echo $img->render();
+```
+
 Thanks
 ------
 
