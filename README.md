@@ -46,7 +46,7 @@ Options:
                         transparent pixels drawn as if opaque
 ```
 
-you also can use it anywhere what you want at your application like this:
+You also can use it anywhere what you want at your application like this:
 
 ```php
 use Bigweb\Img2text\Img2text;
@@ -63,7 +63,8 @@ echo $img->render();
 
 Thanks
 ------
-
+Use https://github.com/docopt/docopt.php to create beautiful command-line interface
+Use https://github.com/Intervention/image to process image
 Thanks @hit9, This project stolen from  https://github.com/hit9/img2txt
 
 License
