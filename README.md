@@ -63,9 +63,9 @@ echo $img->render();
 
 Thanks
 ------
-Use https://github.com/docopt/docopt.php to create beautiful command-line interface
-Use https://github.com/Intervention/image to process image
-Thanks @hit9, This project stolen from  https://github.com/hit9/img2txt
+1. Use https://github.com/docopt/docopt.php to create beautiful command-line interface
+2. Use https://github.com/Intervention/image to process image
+3. Thanks @hit9, This project stolen from  https://github.com/hit9/img2txt
 
 License
 -------
