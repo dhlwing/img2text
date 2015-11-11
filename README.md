@@ -2,7 +2,7 @@ img2text
 =======
 
 Image to Ascii Text, can output to html or ansi terminal.
-
+See also [img2text](https://github.com/dhlwing/gif2text)
 
 
 Example

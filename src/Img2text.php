@@ -105,12 +105,12 @@ HTML;
             return [0, 0, 0, 0];
         } else {
             return [
-                int((($src[0] * $src_multiplier) +
+                intval((($src[0] * $src_multiplier) +
                     ($dst[0] * $dst_multiplier)) / $result_alpha),
 
-                int((($src[1] * $src_multiplier) +
+                intval((($src[1] * $src_multiplier) +
                     ($dst[1] * $dst_multiplier)) / $result_alpha),
-                int((($src[2] * $src_multiplier) +
+                intval((($src[2] * $src_multiplier) +
                     ($dst[2] * $dst_multiplier)) / $result_alpha),
                 intval($result_alpha * 255)
             ];
